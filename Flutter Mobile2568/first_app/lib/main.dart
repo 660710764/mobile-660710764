@@ -30,35 +30,51 @@ class MyWidget extends StatelessWidget {
         centerTitle: false,
         backgroundColor: Colors.white,
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 20),
-          Row(
-            children: [
-              SizedBox(width: 20),
-              Container(height: 100, width: 100, color: Colors.red),
-              SizedBox(width: 20),
-              Container(height: 100, width: 100, color: Colors.green),
-              SizedBox(width: 20),
-              Container(height: 100, width: 100, color: Colors.blue),
-            ],
-          ),
-          SizedBox(height: 20),
-          Row(
-            children: [
-              SizedBox(width: 20),
-              Expanded(
-                flex: 1,
-                child: Container(height: 100, color: Colors.yellow),
+      body: Center(
+        child: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            SizedBox(height: 20),
+            Container(
+              height: 300,
+              width: 120,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.black,
               ),
-              SizedBox(width: 20),
-              Expanded(
-                flex: 2,
-                child: Container(height: 100, color: Colors.purple),
+            ),
+            Positioned(
+              top: 15,
+              child: Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                ),
               ),
-            ],
-          ),
-        ],
+            ),
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.yellow,
+              ),
+            ),
+            Positioned(
+              bottom: 15,
+              child: Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
