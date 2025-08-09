@@ -30,51 +30,11 @@ class MyWidget extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(
-        child: Stack(
-          alignment: AlignmentDirectional.center,
-          children: [
-            Container(
-              width: 120,
-              height: 300,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.black,
-              ),
-            ),
-
-            Positioned(
-              top: 15,
-              child: Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.red,
-                ),
-              ),
-            ),
-
-            Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.yellow,
-              ),
-            ),
-
-            Positioned(
-              bottom: 15,
-              child: Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.green,
-                ),
-              ),
-            ),
-          ],
+        child: ElevatedButton(
+          onPressed: () {
+            print('Button Pressend');
+          },
+          child: const Text('Click Me'),
         ),
       ),
     );
