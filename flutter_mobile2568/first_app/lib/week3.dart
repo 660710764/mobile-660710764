@@ -12,7 +12,7 @@ class MyWidget extends StatelessWidget {
         centerTitle: false,
         backgroundColor: Colors.white,
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemCount: listproduct.length,
         itemBuilder: (context, index) {
           return ListTile(
@@ -20,6 +20,13 @@ class MyWidget extends StatelessWidget {
             title: Text(listproduct[index]),
             subtitle: Text('loremlorem...'),
             trailing: Icon(Icons.edit),
+          );
+        },
+        separatorBuilder: (context, index) {
+          return Container(
+            height: 5,
+            width: double.infinity,
+            color: Colors.red,
           );
         },
       ),
