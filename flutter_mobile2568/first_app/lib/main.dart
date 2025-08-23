@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/week3.dart';
+import 'package:first_app/assignment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MyWidget(),
+      home: assignment(),
     );
   }
 }
