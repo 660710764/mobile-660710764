@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:first_app/assignment.dart';
+import 'package:first_app/greeting_widget.dart';
+import 'package:first_app/couter_fullwidget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: assignment(),
+      home: CouterFullwidget(),
     );
   }
 }
